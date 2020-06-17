@@ -1,1 +1,3 @@
-module "go-learning"
+module go-learning
+
+go 1.14
