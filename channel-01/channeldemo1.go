@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-// 简单的channel创建
+// 简单的channel创建,基本也算是量个goroutine之间的通信的，channel是线程安全的
 var wg sync.WaitGroup
 
 func Channel() {
