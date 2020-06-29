@@ -11,9 +11,10 @@ func SelectDemo() {
 	fmt.Println("阻塞ing")
 	select {
 	case <-c:
-		fmt.Println("1")
 	case <-time.After(time.Second * 5): // timeout
 		close(c)
 		fmt.Println("close chan")
+	default:
+		fmt.Println("default")
 	}
 }
