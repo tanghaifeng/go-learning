@@ -1,6 +1,9 @@
 package collction
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 // 数组
 /**
@@ -12,5 +15,11 @@ func Array1() {
 	var arr [3]string
 	//arr = [3]int{}
 	fmt.Println(arr)
+
+	var interfaceArray = [2]interface{}{111, "34324"}
+	for i := 0; i < len(interfaceArray); i++ {
+		fmt.Print(reflect.TypeOf(interfaceArray[i]), "\t")
+		fmt.Println(interfaceArray[i])
+	}
 
 }
