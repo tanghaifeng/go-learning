@@ -1,7 +1,10 @@
 package main
 
-import sync_learn_01 "go-learning/sync-learn-01"
+import interface_01 "go-learning/interface-01"
 
 func main() {
-	sync_learn_01.TestOnce()
+	var animal interface_01.Animal = interface_01.Cat{}
+	animal.Eat()
+	animal.Run()
+
 }
