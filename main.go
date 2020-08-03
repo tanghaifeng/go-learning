@@ -1,10 +1,14 @@
 package main
 
-import interface_01 "go-learning/interface-01"
+import "go-learning/gindemo"
+
+type chan1 struct {
+}
 
 func main() {
-	var animal interface_01.Animal = interface_01.Cat{}
-	animal.Eat()
-	animal.Run()
+	//const a int = 1
+	//fmt.Printf("%T\n",a)
+
+	gindemo.GinServer()
 
 }
