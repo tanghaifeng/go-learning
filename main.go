@@ -1,20 +1,18 @@
 package main
 
 import (
+	"go-learning/base"
 	_ "go-learning/base"
-	interface_01 "go-learning/interface-01"
 )
 
 type chan1 struct {
 }
 
 func main() {
-
-	t := &interface_01.Tim{"Tim"}
-	b := &interface_01.Ben{"Ben"}
-
-	interface_01.Read(b)
-
-	interface_01.Read(t)
+	//const a int = 1
+	//fmt.Printf("%T\n", a)
+	base.SetMember()
+	m := base.Member{}
+	m.SetMember()
 
 }
