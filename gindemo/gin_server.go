@@ -3,6 +3,7 @@ package gindemo
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"go-learning/gindemo/handler"
 	"net/http"
 )
 
@@ -12,6 +13,7 @@ func GinServer() {
 	engine.GET("/", func(context *gin.Context) {
 		context.JSON(http.StatusOK, "test")
 	})
+	engine.GET("/bind", handler.BindHandler)
 	v1 := engine.Group("v1/")
 	v1.Use(TestMiddleware1)
 	{
