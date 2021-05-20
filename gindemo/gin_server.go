@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"go-learning/gindemo/handler"
 	"net/http"
+	"time"
 )
 
 func GinServer() {
@@ -28,7 +29,18 @@ func GinServer() {
 			context.String(http.StatusOK, "成功1")
 		})
 	}
-	engine.Run(":8080")
+
+	// 自定义http配置
+	s := http.Server{
+		Addr:           ":8080",
+		Handler:        engine,
+		ReadTimeout:    6 * time.Second,
+		WriteTimeout:   6 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+	s.ListenAndServe()
+
+	//engine.Run(":8080")
 }
 
 func TestMiddleware(context *gin.Context) {
