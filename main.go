@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	reptile.ExampleScrape()
+	// 这是为了测试合并分支
+	reptile.ZhangzhouZhaoPing()
 }
